@@ -15,6 +15,6 @@
 // }
 
 // for loop
-// for (var i = 0; i < fruits.length; i += 1) {
+// for (var i = 0; i < fruits.length; i++) {
 //   console.log(fruits[i]);
 // }
