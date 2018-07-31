@@ -73,7 +73,7 @@ var cityPopulations = {chi: 2700000};
 cityPopulations["nyc"] = 8400000;
 cityPopulations.sf = 800000;  // same as cityPopulations["sf"]
 console.log(cityPopulations.nyc);
-console.log()
+console.log('hello');
 
 
 
