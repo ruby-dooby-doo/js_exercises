@@ -98,7 +98,7 @@ function descending(numbers) {
   return newNumbers;
 }
 
-console.log(descending([1, 3, 5, 7]));
+// console.log(descending([1, 3, 5, 7]));
 
 // Write a method that accepts two arrays of numbers, and returns an array of every sum of every combination of single numbers from first and second array. For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should return this array: [101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
 //
@@ -112,3 +112,18 @@ console.log(descending([1, 3, 5, 7]));
 //   result
 // end
 // p sum_combinations([1, 5, 10], [100, 500, 1000])
+
+// sumCombinations([1, 5, 10], [100, 500, 1000]);
+
+function sumCombinations(numbers1, numbers2) {
+  var allCombinationsOfTheSums = [];
+  numbers1.forEach(function(number1) {
+    numbers2.forEach(function(number2) {
+      console.log(number1, number2);
+      allCombinationsOfTheSums.push(number1 + number2);
+    });
+  });
+  return allCombinationsOfTheSums;
+}
+
+console.log(sumCombinations([1, 5, 10], [100, 500, 1000]));
