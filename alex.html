@@ -7,6 +7,10 @@
     .hidden {
       display: none;
     }
+
+    .red {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -19,6 +23,8 @@
   <div>
     y coordinate <span id="y-coordinate">brian</span>
   </div>
+
+  <button onclick="makeRed()">I am a button!!!</button>
 
   <script>
     function doSomething() {
@@ -38,6 +44,20 @@
       // hide it
       header.classList.toggle('hidden');
     }
+
+    function makeRed() {
+      console.log('making the header red...');
+      // grab the header
+      var header = document.querySelector('h1');
+      header.classList.add('red')
+      // header.style.color = 'green';
+    }
+
+    // event listener
+    // run function
+    // get HTML element
+    // modify it
+
   </script>
 </body>
 </html>
