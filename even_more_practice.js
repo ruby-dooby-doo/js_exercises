@@ -52,26 +52,26 @@ function index(inputArray, number) {
 
 // 4. Write a function that accepts two arguments. The first argument is an array of numbers that are in ascending order. The second argument is a new number that is not yet in the array. The function should return a new array with the new number inserted in the proper place. Do not use the “sort” method!
 
-// function addToArray(inputArray, number) {
-//   for (var i = 0; i < inputArray.length; i++) {
-//     // console.log(inputArray);
-//     if (inputArray[i] > number) {
-//       // insert into the array
-//       // console.log(inputArray[i]);
-//       inputArray.splice(i, 0, number);
-//       return inputArray;
-//     }
-//   }
-//   console.log(inputArray[inputArray.length - 1])
-//   console.log(number);
-//   if (inputArray[inputArray.length - 1] < number) {
-//     console.log('hi');
-//     inputArray.push(number);
-//   }
-//   return inputArray;
-// }
+function addToArray(inputArray, number) {
+  for (var i = 0; i < inputArray.length; i++) {
+    console.log(i);
+    if (inputArray[i] > number) {
+      // insert into the array
+      // console.log(inputArray[i]);
+      inputArray.splice(i, 0, number);
+      return inputArray;
+    }
+  }
+  console.log(inputArray[inputArray.length - 1])
+  console.log(number);
+  if (inputArray[inputArray.length - 1] < number) {
+    console.log('hi');
+    inputArray.push(number);
+  }
+  return inputArray;
+}
 
-// console.log(addToArray([1,2,5,6,7,10,11,15,20], 28));
+console.log(addToArray([1,2,5,6,7,10,11,15,20], 28));
 
 
 
@@ -89,6 +89,7 @@ function addToArray(inputArray, number) {
     }
     newArray.push(inputArray[i]);
   }
+
   return newArray;
 }
 
