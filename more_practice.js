@@ -15,12 +15,12 @@
 
 function selectEvenItems(strings) {
   var result = [];
-  var index = 0;
+  var idx = 0;
   strings.forEach(function(string) {
-    if (index % 2 === 0) {
+    if (idx % 2 === 0) {
       result.push(string);
     }
-    index++;
+    idx++;
   })
   return result;
 }

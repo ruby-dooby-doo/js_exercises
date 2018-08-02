@@ -11,6 +11,10 @@
     .red {
       color: red;
     }
+
+    .padded {
+      padding-left: 100px;
+    }
   </style>
 </head>
 <body>
@@ -24,7 +28,7 @@
     y coordinate <span id="y-coordinate">brian</span>
   </div>
 
-  <button onclick="makeRed()">I am a button!!!</button>
+  <button onclick="addPadding()">I am a button!!!</button>
 
   <script>
     function doSomething() {
@@ -45,12 +49,20 @@
       header.classList.toggle('hidden');
     }
 
-    function makeRed() {
+    function addPadding() {
       console.log('making the header red...');
       // grab the header
       var header = document.querySelector('h1');
-      header.classList.add('red')
-      // header.style.color = 'green';
+      // header.classList.add('padded');
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      console.log(color);
+      console.log(letters);
+      // header.classList.add('red');
+      header.style.color = color;
     }
 
     // event listener
