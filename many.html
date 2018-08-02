@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <p onclick="changeParagraph(this)">First p tag</p>
+  <p onclick="changeParagraph(this)">Second p tag</p>
+  <p onclick="changeParagraph(this)">Third p tag</p>
+  <p onclick="changeParagraph(this)">Fourth p tag</p>
+
+  <button onclick="makeBlue()">make the paragraphs blue</button>
+
+  <script>
+    function changeParagraph(ptag) {
+      // var ptag = document.querySelector('p');
+      ptag.classList.add('red');
+    }
+
+    // we want to modify ALL the paragraph tags
+    function makeBlue() {
+      console.log('making blue...');
+      var ptags = document.querySelectorAll('p');
+      // console.log(ptag);
+      // doesn't work
+      // ptags.classList.add('blue');
+
+      for (var i = 0; i < ptags.length; i++) {
+        ptags[i].classList.add('blue');
+      }
+
+    }
+
+  </script>
+</body>
+</html>
