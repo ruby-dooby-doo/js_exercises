@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style type="text/css">
+    .strike-through {
+      text-decoration: line-through;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h4>You have completed <span id="count">0</span> tasks</h4>
+  <p onclick="completeTask(this)">Pay bills</p>
+  <p onclick="completeTask(this)">Wash car</p>
+  <p onclick="completeTask(this)">Get laundry</p>
+
+  <button onclick="hideCompletedTasks()">Hide completed tasks</button>
+
+  <button onclick="showCompletedTasks()">Show completed tasks</button>
+  <script>
+// It should automatically update each time tasks are marked as complete.
+    function completeTask(pTag) {
+      console.log('completeing task...');
+      console.log(pTag);
+      pTag.classList.toggle('strike-through');
+      // how many complete tasks are there?
+      var completedTasks = document.querySelectorAll('.strike-through');
+      console.log(completedTasks.length);
+      var count = document.querySelector('#count');
+      count.innerText = completedTasks.length;
+    }
+
+    function hideCompletedTasks() {
+      console.log('hiding the completed tasks');
+      // hide all the tasks that have been marked complete
+      var completedTasks = document.querySelectorAll('.strike-through');
+      console.log(completedTasks);
+      // hide all the completed tasks
+      completedTasks.forEach(function(completedTask) {
+        completedTask.classList.add('hidden');
+      });
+    }
+
+    function showCompletedTasks() {
+      console.log('showing completed tasks');
+      // get correct HTML elements
+      // all of the elements with the class hidden
+      var hiddenTasks = document.querySelectorAll('.hidden');
+      hiddenTasks.forEach(function(hiddenTask) {
+        hiddenTask.classList.remove('hidden');
+      });
+    }
+    // event listener
+    // run function
+    // get HTML element
+    // modify it -- innerText -- .addClass
+
+  </script>
+</body>
+</html>
